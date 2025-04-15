@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of John Andre De la Cuesta - UI/UX Designer, Frontend Developer, and Graphic Designer.">
+    <link rel="icon" href="assets/imgs/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #16161a;
+            color: #fff;
+            margin: 0;
+            padding-top: 80px;
+        }
+        header nav.navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: #16161a;
+            border-bottom: 1px solid #2a2b37;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            background-color: transparent;
+            margin: 0 5px;
+            padding: 8px 15px;
+            border-radius: 8px;
+            color: #fff;
+            transition: 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: #2a2b37;
+        }
+
+        .profile-card {
+            background-color: #1f1f25;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        
+        .profile-card img {
+            width: 200px;
+            height: 200px;
+            border: 6px solid #2a2b37;
+        }
+
+        .tab-content {
+            background-color: #1f1f25;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .tab-content.show {
+            opacity: 1;
+        }
+
+        .btn-group-custom {
+            margin-top: 20px;
+        }
+        .btn-secondary {
+            background-color: #2a2b37;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 12px;
+            width: 100%;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary.active {
+            background-color: #4b4c5a;
+            font-weight: bold;
+        }
+
+        .tag {
+            background-color: #2a2b37;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 576px) {
+            .btn-secondary {
+                width: auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .navbar-nav {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <title>DRE</title>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DRE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="toggleMenu()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="d-flex flex-column justify-content-start align-items-center pt-5 px-3">
+    <div class="profile-card">
+        <img src="assets/imgs/profile.jpg" alt="Profile" class="rounded-circle mb-3 img-fluid">
+        <h2 class="mb-2">John Andre De la Cuesta</h2>
+        <p class="text-secondary mb-3 text-center">Bachelor of Science in Information Technology</p>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a target="_blank" href="https://www.facebook.com/johnandre.delacuesta/" class="text-secondary" aria-label="Facebook">
+                    <i class="bi bi-facebook fs-1"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a target="_blank" href="https://www.linkedin.com/in/andre-de-la-cuesta-192565352/" class="text-secondary" aria-label="LinkedIn">
+                    <i class="bi bi-linkedin fs-1"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a target="_blank" href="https://github.com/Drdrez" class="text-secondary" aria-label="GitHub">
+                    <i class="bi bi-github fs-1"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Tag section -->
+        <div class="mt-3 d-flex flex-wrap justify-content-center gap-2">
+            <span class="tag">UI/UX Designer</span>
+            <span class="tag">Graphic Designer</span>
+            <span class="tag">Video Editor</span>
+            <span class="tag">Frontend Developer</span>
+            <span class="tag">Photoshop</span>
+            <span class="tag">Illustrator</span>
+            <span class="tag">Figma</span>
+            <span class="tag">HTML / CSS / JS</span>
+        </div>
+    </div>
+
+    <div class="btn-group-custom d-flex flex-column flex-sm-row justify-content-center align-items-stretch align-items-sm-center w-100 mt-3">
+        <button class="btn btn-secondary me-sm-2" onclick="showTab(event, 'education')">Education</button>
+        <button class="btn btn-secondary me-sm-2" onclick="showTab(event, 'projects')">Projects</button>
+        <button class="btn btn-secondary" onclick="showTab(event, 'skills')">Skills</button>
+    </div>
+
+    
+</section>
+
+<!-- Education Tab -->
+<!-- Education Tab -->
+<div id="education" class="tab-content p-4 mt-4 mx-auto">
+    <h3 class="mb-4 text-center">Education</h3>
+    <div class="d-flex flex-column gap-4">
+        <div class="card bg-dark border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-white">Bachelor of Science in Information Technology</h5>
+                <p class="text-secondary"><strong>Institution:</strong> Ateneo de Davao University</p>
+                <p class="text-secondary"><strong>Timeline:</strong> Currently enrolled</p>
+            </div>
+        </div>
+        <div class="card bg-dark border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-white">STEM Graduate</h5>
+                <p class="text-secondary"><strong>Institution:</strong> Tandag National Science High School</p>
+                <p class="text-secondary"><strong>Timeline:</strong> 2017 - 2023</p>
+                <p class="text-secondary"><strong>Details:</strong> Focused on advanced mathematics, sciences, and technology. Graduated with honors and laid the foundation for my pursuit in Information Technology.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Keep your <head> and style sections as is, and just replace the three tab sections and the JS below -->
+
+<!-- Projects Tab -->
+<div id="projects" class="tab-content p-4 mt-4 mx-auto d-none">
+    <h3 class="mb-4 text-center">Projects</h3>
+    <div class="d-flex flex-column gap-4">
+        <div class="card bg-dark border-0 shadow-sm">
+            <img src="assets/imgs/project1.jpg" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+                <h5 class="card-title text-white">A Glimpse of My Work</h5>
+                <p class="card-text text-secondary">At DRE Graphx, I've worked on a variety of projects, from brand identity designs to esports jerseys, graphic designs, website layouts, and more. I focus on delivering unique and engaging designs that represent my clients' brands while ensuring a modern, user-friendly experience. Some of the projects I've handled include creating visually compelling esports merchandise, website mockups, and promotional materials that drive user engagement.</p>
+            </div>
+        </div>
+        <div class="card bg-dark border-0 shadow-sm">
+            <img src="assets/imgs/project2.jpg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+                <h5 class="card-title text-white">Personal Portfolio Website</h5>
+                <p class="card-text text-secondary">A responsive portfolio website showcasing my design work, development projects, and skills. It includes an interactive layout and smooth animations for user engagement.</p>
+            </div>
+        </div>
+        <div class="card bg-dark border-0 shadow-sm">
+            <img src="assets/imgs/project3.jpg" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+                <h5 class="card-title text-white">AdDU Events</h5>
+                <p class="card-text text-secondary">Here’s a prototype concept I made for an ADDU Events mobile app — it’s part of one of our activities. The idea is to have one place where students can easily check upcoming events and campus happenings.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Skills Tab -->
+<div id="skills" class="tab-content p-4 mt-4 mx-auto d-none">
+    <h3 class="mb-4 text-center">Skills</h3>
+    <div class="d-flex flex-column gap-4">
+        <div>
+            <h5>UI/UX Design</h5>
+            <p class="text-secondary">Experience in creating user-centered designs that enhance usability and provide seamless interaction with digital products.</p>
+        </div>
+        <div>
+            <h5>Graphic Design</h5>
+            <p class="text-secondary">Proficient in designing visually appealing graphics for print and digital media, including logos, banners, and promotional materials.</p>
+        </div>
+        <div>
+            <h5>HTML / CSS / JS</h5>
+            <p class="text-secondary">Solid knowledge of web development languages, creating responsive, modern websites and applications.</p>
+        </div>
+        <div>
+            <h5>Beginner in PHP/MySQL</h5>
+            <p class="text-secondary">Basic understanding of server-side scripting with PHP and database management with MySQL for dynamic web development.</p>
+        </div>
+        <div>
+            <h5>Figma</h5>
+            <p class="text-secondary">Experience with Figma for designing UI components, prototypes, and collaborating with teams on design iterations.</p>
+        </div>
+        <div>
+            <h5>Adobe Photoshop</h5>
+            <p class="text-secondary">Skilled in image editing, photo manipulation, and creating graphic designs using Adobe Photoshop.</p>
+        </div>
+        <div>
+            <h5>Adobe Illustrator</h5>
+            <p class="text-secondary">Proficient in vector-based graphic design, including logo design, illustrations, and scalable artwork creation in Adobe Illustrator.</p>
+        </div>
+        <div>
+            <h5>Video Editing</h5>
+            <p class="text-secondary">Ability to edit and create engaging videos using software like Adobe Premiere Pro or Final Cut Pro.</p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- JS - Add fade and button active effect -->
+<script>
+      
+    function showTab(event, tabId) {
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.remove('show');
+            tab.classList.add('d-none');
+        });
+
+        document.querySelectorAll('.btn-secondary').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        const activeTab = document.getElementById(tabId);
+        activeTab.classList.remove('d-none');
+        setTimeout(() => {
+            activeTab.classList.add('show');
+        }, 10);
+
+        if (event.target.classList.contains('btn')) {
+            event.target.classList.add('active');
+        }
+    }
+
+    window.onload = () => {
+        showTab(new Event('load'), 'education');
+        document.querySelectorAll('.btn-secondary')[0].classList.add('active');
+    };
+</script>
+
+</body>
+</html>
